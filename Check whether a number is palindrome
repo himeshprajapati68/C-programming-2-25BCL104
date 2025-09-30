@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main() {
+    int num, original, reversed = 0, digit;
+
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    original = num;  // Store original number
+
+    if(num < 0) {
+        num = -num;  // Consider absolute value for negative numbers
+    }
+
+    while(num > 0) {
+        digit = num % 10;
+        reversed = reversed * 10 + digit;
+        num = num / 10;
+    }
+
+    if(original == reversed || original == -reversed) {
+        printf("The number %d is a palindrome.\n", original);
+    } else {
+        printf("The number %d is not a palindrome.\n", original);
+    }
+
+    return 0;
+}
