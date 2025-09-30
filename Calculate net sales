@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main() {
+    float grossSales, salesReturns, discounts, allowances, netSales;
+
+    printf("Enter Gross Sales: ");
+    scanf("%f", &grossSales);
+
+    printf("Enter Sales Returns: ");
+    scanf("%f", &salesReturns);
+
+    printf("Enter Discounts: ");
+    scanf("%f", &discounts);
+
+    printf("Enter Allowances: ");
+    scanf("%f", &allowances);
+
+    netSales = grossSales - (salesReturns + discounts + allowances);
+
+    printf("Net Sales: %.2f\n", netSales);
+
+    return 0;
+}
