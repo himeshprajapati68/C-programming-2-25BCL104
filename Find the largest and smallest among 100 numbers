@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main() {
+    int i;
+    float num, largest, smallest;
+
+    printf("Enter 100 numbers:\n");
+
+    // Read the first number to initialize largest and smallest
+    scanf("%f", &num);
+    largest = smallest = num;
+
+    // Read remaining 99 numbers
+    for(i = 2; i <= 100; i++) {
+        scanf("%f", &num);
+        if(num > largest) {
+            largest = num;
+        }
+        if(num < smallest) {
+            smallest = num;
+        }
+    }
+
+    printf("The largest number is: %.2f\n", largest);
+    printf("The smallest number is: %.2f\n", smallest);
+
+    return 0;
+}
