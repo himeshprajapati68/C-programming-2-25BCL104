@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+int main() {
+    float basicSalary, hra, da, otherAllowances, deductions, grossSalary, netSalary;
+
+    // Input values
+    printf("Enter Basic Salary: ");
+    scanf("%f", &basicSalary);
+
+    printf("Enter HRA (House Rent Allowance): ");
+    scanf("%f", &hra);
+
+    printf("Enter DA (Dearness Allowance): ");
+    scanf("%f", &da);
+
+    printf("Enter Other Allowances: ");
+    scanf("%f", &otherAllowances);
+
+    printf("Enter Total Deductions (e.g., Tax, PF, Insurance): ");
+    scanf("%f", &deductions);
+
+    // Calculate gross and net salary
+    grossSalary = basicSalary + hra + da + otherAllowances;
+    netSalary = grossSalary - deductions;
+
+    // Output
+    printf("\nGross Salary: %.2f", grossSalary);
+    printf("\nNet Salary: %.2f\n", netSalary);
+
+    return 0;
+}
