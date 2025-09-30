@@ -1,0 +1,12 @@
+#include <stdio.h>
+
+int main() {
+    int i;
+    char name[] = "Himesh";  // Replace "Himesh" with your name
+
+    for(i = 1; i <= 5; i++) {
+        printf("%s\n", name);
+    }
+
+    return 0;
+}
